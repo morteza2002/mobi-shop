@@ -1,0 +1,121 @@
+.slideshow-container {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+  }
+  
+  .prev {
+    right: 0; /* جایگزین left با right */
+    border-radius: 0 3px 3px 0; /* برعکس کردن حالت border-radius */
+
+  }
+  
+  .next {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .text {
+    color: black;
+    font-size: 23px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .dot.active,
+  .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+
+  /* static-image */
+
+  .static-image {
+    display: flex;
+  }
+  
+  .static-image {
+    display: flex;
+  }
+  
+  .image-with-transition {
+    position: relative;
+    width: 150px; /* تنظیم عرض دلخواه */
+    height: 100px; /* تنظیم ارتفاع دلخواه */
+    margin-right: 20px; /* فاصله بین دو عکس */
+    overflow: hidden;
+  }
+  
+  .image-with-transition img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s; /* افکت ترانزیشن برای تصویر */
+  }
+  
+  .image-with-transition:hover img {
+    transform: scale(1.1); /* تغییر اندازه تصویر هنگام هاور */
+  }
+  

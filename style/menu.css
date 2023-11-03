@@ -1,19 +1,23 @@
-/* استایل منو برای صفحات بزرگتر */
+/* Styles for larger screens */
 .menu {
+    position: relative;
     background: linear-gradient(135deg, #3e7cb4, #86a8e7);
     padding: 15px;
     text-align: center;
+    border-style: ridge;
+    margin-top: 10px;
 }
 
 .menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* نمایش منو افقی */
+    display: flex; /* Display menu horizontally */
+    justify-content: center; /* Align menu items at the center */
 }
 
 .menu-list li {
-    margin-right: 20px; /* فاصله بین آیتم‌های منو */
+    margin-right: 20px; /* Spacing between menu items */
 }
 
 .menu-list li a {
@@ -22,47 +26,44 @@
 }
 
 .menu-toggle {
-    display: none; /* محو کردن دکمه همبرگر */
+    display: none;
 }
 
-/* استایل منو برای صفحات کوچک‌تر */
+/* Styles for smaller screens */
 @media (max-width: 768px) {
     .menu {
-        padding: 0; /* حذف padding در حالت همبرگر */
+        padding: 0;
+        text-align: left;
     }
 
     .menu-list {
-        display: none; /* پنهان کردن منو افقی */
-        flex-direction: column; /* نمایش منو عمودی */
+        display: none;
+        flex-direction: column;
+        text-align: center; /* Align text at the center for smaller screens */
     }
 
     .menu-list.active {
-        display: flex; /* نمایش منو همبرگر هنگام فعال شدن */
+        display: flex;
     }
 
     .menu-list li {
-        margin: 10px 0; /* تنظیم فاصله بین آیتم‌های منو */
+        margin: 10px 0;
     }
 
     .menu-list li a {
-        display: block; /* نمایش آیتم‌ها به صورت بلوک */
+        display: block;
+        color: #002c52;
     }
 
     .menu-toggle {
-        position: relative;
-        display: block; /* نمایش دکمه همبرگر */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: block;
         background: none;
         border: none;
         color: #002c52;
         font-size: 24px;
         cursor: pointer;
-        position: fixed;
-        top: 220px; /* فاصله از بالا */
-        left: 98%; /* قرار دادن در وسط افقی */
-        transform: translateX(-50%); /* تنظیم موقعیت در وسط */
     }
 }
-
-
-
-
