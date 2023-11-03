@@ -2,6 +2,7 @@
     max-width: 1000px;
     margin: auto;
     position: relative;
+    margin-top: 50px;
   }
   
   .mySlides {
@@ -91,26 +92,24 @@
 
 
   /* static-image */
-
-  .static-image {
-    display: flex;
-  }
   
   .static-image {
-    display: flex;
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: auto;
   }
   
   .image-with-transition {
     position: relative;
-    width: 150px; /* تنظیم عرض دلخواه */
-    height: 100px; /* تنظیم ارتفاع دلخواه */
-    margin-right: 20px; /* فاصله بین دو عکس */
+    width: 100%; /* تغییر اندازه عرض به صورت واحد نسبی */
+    max-width: 400px; /* حداکثر عرض ممکن */
+    height: auto; /* ارتفاع به صورت اتوماتیک تنظیم شود */
     overflow: hidden;
   }
   
   .image-with-transition img {
     width: 100%;
-    height: 100%;
+    height: auto; /* ارتفاع را به صورت اتوماتیک تنظیم می‌کند */
     display: block;
     transition: transform 0.3s; /* افکت ترانزیشن برای تصویر */
   }
