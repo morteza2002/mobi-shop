@@ -1,0 +1,25 @@
+
+.main-content {
+    position: absolute;
+    width: 100%; /* Set width to 100% to make it responsive */
+    max-width: 28500px; /* Limit the maximum width */
+    left: 50%; /* Set left to 50% */
+    transform: translateX(-50%); /* Adjust the position to center */
+     background: linear-gradient(135deg, #3e7cb4, #86a8e7); /* Apply the gradient to the entire body */
+}
+
+/* نمونه استایل‌های ریسپانسیو برای کلاس .main-content */
+@media (max-width: 768px) {
+    .main-content {
+        font-size: 14px;
+        /* هماهنگ‌سازی محتوا برای نمایش ریسپانسیو با اندازه کوچک‌تر */
+    }
+}
+
+/* استایل برای اندازه‌های بسیار کوچک‌تر از 420px */
+@media (max-width: 420px) {
+    .main-content {
+        font-size: 12px;
+        /* هماهنگ‌سازی محتوا برای نمایش در اندازه‌های کوچک‌تر */
+    }
+}

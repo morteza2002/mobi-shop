@@ -1,0 +1,68 @@
+/* استایل منو برای صفحات بزرگتر */
+.menu {
+    background: linear-gradient(135deg, #3e7cb4, #86a8e7);
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* نمایش منو افقی */
+}
+
+.menu-list li {
+    margin-right: 20px; /* فاصله بین آیتم‌های منو */
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none; /* محو کردن دکمه همبرگر */
+}
+
+/* استایل منو برای صفحات کوچک‌تر */
+@media (max-width: 768px) {
+    .menu {
+        padding: 0; /* حذف padding در حالت همبرگر */
+    }
+
+    .menu-list {
+        display: none; /* پنهان کردن منو افقی */
+        flex-direction: column; /* نمایش منو عمودی */
+    }
+
+    .menu-list.active {
+        display: flex; /* نمایش منو همبرگر هنگام فعال شدن */
+    }
+
+    .menu-list li {
+        margin: 10px 0; /* تنظیم فاصله بین آیتم‌های منو */
+    }
+
+    .menu-list li a {
+        display: block; /* نمایش آیتم‌ها به صورت بلوک */
+    }
+
+    .menu-toggle {
+        position: relative;
+        display: block; /* نمایش دکمه همبرگر */
+        background: none;
+        border: none;
+        color: #002c52;
+        font-size: 24px;
+        cursor: pointer;
+        position: fixed;
+        top: 220px; /* فاصله از بالا */
+        left: 98%; /* قرار دادن در وسط افقی */
+        transform: translateX(-50%); /* تنظیم موقعیت در وسط */
+    }
+}
+
+
+
+

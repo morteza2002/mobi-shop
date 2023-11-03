@@ -1,0 +1,80 @@
+.bottom-bar {
+    background: linear-gradient(135deg, #3e7cb4, #86a8e7);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.site-info {
+    display: flex;
+    align-items: center;
+}
+
+/* Site logo styles */
+.site-logo {
+    width: 80px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+/* Site text styles */
+.site-text {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px;
+} 
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button, .price-btn {
+    padding: 8px 15px;
+    background-color: #4ca8af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.price-btn {
+    background-color: #4CAF50;
+    padding: 8px 15px;
+    margin-left: 10px;
+}
+
+/* ریسپانسیو برای صفحات با عرض کمتر از 768px */
+@media (max-width: 768px) {
+       .bottom-bar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        text-align: center; /* Center-align text */
+        gap: 10px; /* Add some space between items */
+    }
+    .site-logo {
+        width: 60px;
+        height: 50px;
+        margin-right: 5px;
+    }
+    .site-text {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .search-bar input[type="text"] {
+        padding: 3px;
+        margin-right: 5px;
+    }
+
+    .search-button, .price-btn {
+        padding: 3px 3px;
+    }
+}
