@@ -12,6 +12,18 @@
   grid-template-columns: 3fr 1fr;
   grid-gap: 1px; /* فاصله بین دو بخش */
 }
+
+.subtitle {
+  position: relative;
+  padding: 0px;
+  margin: 0px 0px 20px 0px;
+  line-height: normal;
+  font-size: 15px;
+  color: #000000;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 3px;
+  margin: 30px;
+}
 /* نمونه استایل‌های ریسپانسیو برای کلاس .main-content */
 @media (max-width: 768px) {
   .main-content {

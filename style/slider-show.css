@@ -1,13 +1,22 @@
 /* Slideshow Container */
 .slideshow-container {
-  max-width: 100%;
+  max-width: 80%;
   position: relative;
   margin-top: 50px;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Slides */
 .mySlides {
   display: none;
+}
+.mySlides img {
+  width: 100%;
+  height: auto;
 }
 
 /* Previous and Next buttons */

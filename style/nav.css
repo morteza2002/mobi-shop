@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #3e7cb4;
-  padding: 15px;
+  padding: 5px;
   text-align: center;
   position: relative;
 }
@@ -13,6 +13,8 @@
   color: white;
   text-decoration: none;
   padding: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #ccc; /* خط بردار بالای اسلایدر */
 }
 
 /* بخش لینک‌های چپ */
