@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style/bottom_bar.css" />
     <link rel="stylesheet" href="style/main-content.css" />
     <link rel="stylesheet" href="style/menu.css" />
-   <link rel="stylesheet" href="style/slider-show.css">
+    <link rel="stylesheet" href="style/slider-show.css" />
+    <link rel="stylesheet" href="style/shop-item.css">
   </head>
   <body>
     <div class="main-content">
@@ -104,59 +105,125 @@
           <li><a href="#">لوازم خانگی</a></li>
         </ul>
       </div>
-      <div class="grid-container"> 
-      <div class="slideshow-container">
-        <div class="mySlides active">
-          <div class="numbertext">1 / 3</div>
-          <a href="/services/application_design">
-            <img src="public/Slideshow-1.jpg" style="width: 100%; height: 100%;" alt="Image 1" />
-          </a>
-          <div class="text">mobi-shop</div>
-        </div>
-      
-        <div class="mySlides">
-          <div class="numbertext">2 / 3</div>
-          <a href="/services/web_design">
-            <img src="public/Slideshow-3.jpg" style="width: 100%;" alt="Image 2" />
-          </a>
-          <div class="text">mobi-shop</div>
-        </div>
-      
-        <div class="mySlides">
-          <div class="numbertext">3 / 3</div>
-          <a href="/tutorials">
-            <img src="public/Slideshow-4.jpg" style="width: 100%;" alt="Image 3" />
-          </a>
-          <div class="text">mobi-shop</div>
-        </div>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        
-      
-        <br />
-      
-        <div style="text-align: center;">
-          <span class="dot active" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-      </div>
-      <div class="static-image">
-        
-        <div class="image-with-transition">
-          <img src="public/static-img1.jpg" alt="Image 1">
-            <img src="public/static-img2.jpg" alt="Image 2">
-          
-        </div>
-      </div>
-    </div>
+      <div class="grid-container">
+        <div class="slideshow-container">
+          <div class="mySlides active">
+            <div class="numbertext">1 / 3</div>
+            
+              <img
+                src="#"
+                style="width: 100%; height: 100%"
+                alt="Image 1"
+              />
+            
+            <div class="text">mobi-shop</div>
+          </div>
 
+          <div class="mySlides">
+            <div class="numbertext">2 / 3</div>
+            
+              <img
+                src="public/Slideshow-4.jpg"
+                style="width: 100%"
+                alt="Image 2"
+              />
+            
+            <div class="text">mobi-shop</div>
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 3</div>
+            
+              <img
+                src="public/Slideshow-4.jpg"
+                style="width: 100%"
+                alt="Image 3"
+              />
+           
+            <div class="text">mobi-shop</div>
+          </div>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <br />
+
+          <div style="text-align: center">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+        <div class="static-image">
+          <div class="image-with-transition">
+            <img src="public/static-img1.jpg" alt="Image 1" />
+            <img src="public/static-img2.jpg" alt="Image 2" />
+          </div>
+        </div>
+      </div>
+      <div class="slider-container2" data-slides-more-than-visible="false">
+        <div class="slider2">
+          <!-- محصول 1 -->
+          <div class="slide2">
+            <img src="public/products/alexander-andrews-Wzs4-QEmCUQ-unsplash.jpg" alt="محصول 1">
+            <h3 class="product-title">محصول 1</h3>
+            <p class="product-info price">قیمت: ۱۰۰ تومان</p>
+            <button class="buy-btn">خرید</button>
+            <p class="product-info quantity-left">موجودی: 5</p>
+          </div>
+          <!-- محصول 2 -->
+          <div class="slide2">
+            <img src="public/products/iphone-410324_1280.jpg" alt="محصول 2">
+            <h3 class="product-title">محصول 2</h3>
+            <p class="product-info price">قیمت: ۱۵۰ تومان</p>
+            <button class="buy-btn">خرید</button>
+            <p class="product-info quantity-left">موجودی: 7</p>
+          </div>
+          <!-- محصول 3 -->
+          <div class="slide2">
+            <img src="public/products/phone-1869510_1280.jpg" alt="محصول 3">
+            <h3 class="product-title">محصول 3</h3>
+            <p class="product-info price">قیمت: ۲۰۰ تومان</p>
+            <button class="buy-btn">خرید</button>
+            <p class="product-info quantity-left">موجودی: 3</p>
+          </div>
+         
+          <div class="slide2">
+            <img src="public/products/phone-1869510_1280.jpg" alt="محصول 3">
+            <h3 class="product-title">محصول 4</h3>
+            <p class="product-info price">قیمت: ۲۰۰ تومان</p>
+            <button class="buy-btn">خرید</button>
+            <p class="product-info quantity-left">موجودی: 3</p>
+          </div>
+
+
+          <div class="slide2">
+            <img src="public/products/phone-1869510_1280.jpg" alt="محصول 3">
+            <h3 class="product-title">محصول 5</h3>
+            <p class="product-info price">قیمت: ۲۰۰ تومان</p>
+            <button class="buy-btn">خرید</button>
+            <p class="product-info quantity-left">موجودی: 3</p>
+          </div>
+          <div class="slide2">
+            <img src="public/products/phone-1869510_1280.jpg" alt="محصول 3">
+            <h3 class="product-title">محصول 6</h3>
+            <p class="product-info price">قیمت: ۲۰۰ تومان</p>
+            <button class="buy-btn">خرید</button>
+            <p class="product-info quantity-left">موجودی: 3</p>
+          </div>
+         
+        </div>
       
-      
+        <button class="prev2" onclick="moveSlider(-1)">قبلی</button>
+        <button class="next2" onclick="moveSlider(1)">بعدی</button>
+      </div>
+
+
+
     </div>
 
     <script src="scripts/nav.js"></script>
     <script src="scripts/menu.js"></script>
     <script src="scripts/slider-show.js"></script>
+    <script src="scripts/shopItem.js"></script>
   </body>
 </html>

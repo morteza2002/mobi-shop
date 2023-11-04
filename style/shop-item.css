@@ -1,0 +1,89 @@
+/* بخش CSS کد اصلی */
+/* اسلایدر */
+.slider-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-top: 1px solid #ccc; /* خط بردار بالای اسلایدر */
+  margin-top: 20px; 
+  }
+  
+  .slider2 {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide2 {
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .slide2 img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  button.buy-btn {
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .product-info {
+    margin: 5px 0;
+  }
+  
+  .quantity-left {
+    color: red;
+  }
+  
+  .prev2, .next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-0%);
+  }
+  
+  .prev2 {
+    left: 0;
+  }
+  
+  .next2 {
+    right: 0;
+  }
+  
+  /* برای صفحات با اندازه کوچکتر از 768px */
+@media (max-width: 768px) {
+  .slider-container2 {
+    width: 90%; /* تغییر عرض اسلایدر */
+  }
+  
+  .slide2 {
+    min-width: 200px; /* تغییر حداقل عرض اسلاید */
+    padding: 15px; /* تغییر حاشیه */
+  }
+  
+  .slide2 img {
+    width: 150px; /* تغییر اندازه تصاویر */
+    height: 150px;
+    margin-bottom: 10px; /* تغییر فاصله بین تصاویر و متن */
+  }
+  
+  button.buy-btn {
+    padding: 6px 12px; /* تغییر اندازه دکمه خرید */
+  }
+  
+  /* و هر تغییر دیگری که برای سازگاری با ابعاد کوچکتر مورد نیاز است */
+}
