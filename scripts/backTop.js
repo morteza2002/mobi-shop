@@ -17,3 +17,13 @@ window.onscroll = function() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
   }
   
+
+  window.onresize = function(_event) {
+    var backToTopBtn = document.getElementById("backToTopBtn");
+    if (window.innerWidth <= 767) {
+        backToTopBtn.classList.add("responsive");
+    } else {
+        backToTopBtn.classList.remove("responsive");
+    }
+};
+

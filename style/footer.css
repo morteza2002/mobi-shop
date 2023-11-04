@@ -46,7 +46,7 @@ p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 99;
+    z-index: 0;
     font-size: 16px;
     border: none;
     outline: none;
@@ -55,9 +55,41 @@ p {
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
+    display: none;
   }
   
   #backToTopBtn:hover {
     background-color: #555;
   }
-  
+  #backToTopBtn i {
+    display: none; /* پیش‌فرض: مخفی کردن آیکون */
+    margin-right: 5px; /* تنظیم فاصله بین آیکون و متن */
+}
+
+  @media (max-width: 767px) {
+    .contact-info, .availability, .about-us, .logo {
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 80px;
+        border-radius: 0; /* حذف شکل گرد */
+    }
+
+    .social-media i {
+        font-size: 24px; /* تغییر اندازه آیکون‌ها */
+        margin: 5px; /* تغییر فاصله بین آیکون‌ها */
+    }
+
+    #backToTopBtn {
+        display: block; /* نمایش دکمه برگشت به بالا */
+    }
+   
+        #backToTopBtn.responsive i {
+            display: inline; /* نمایش آیکون در صفحات کوچک */
+        }
+        
+    
+}
