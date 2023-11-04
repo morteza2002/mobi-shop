@@ -10,7 +10,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-gap: 20px; /* فاصله بین دو بخش */
+  grid-gap: 1px; /* فاصله بین دو بخش */
 }
 /* نمونه استایل‌های ریسپانسیو برای کلاس .main-content */
 @media (max-width: 768px) {
