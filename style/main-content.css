@@ -36,12 +36,14 @@
 .ad_video video {
   position: relative;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-60%);
+  width: 90%;
   height: 50%;
   object-fit: cover;
-  align-items: center;
+  /* align-items: center; (remove this line, as it is not needed for the video element) */
 }
+
 
 @media screen and (max-width: 600px) {
   .ad_video {
