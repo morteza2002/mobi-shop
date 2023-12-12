@@ -1,96 +1,114 @@
 footer {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
+  background-color: #d1cece;
+  padding: 20px;
+  text-align: center;
 }
 
 .contact-info, .availability, .about-us, .logo {
-    display: inline-block;
-    margin: 100px;
-    vertical-align: top; /* برای حفظ چیدمان مناسب */
+  display: inline-block;
+  margin: 100px;
+  vertical-align: top; /* برای حفظ چیدمان مناسب */
 }
 
 h3 {
-    font-size: 20px;
-    color: #333;
+  font-size: 20px;
+  color: #333;
 }
 
 p {
-    margin: 5px 0px;
+  margin: 5px 0px;
 }
 
-.logo img {
-    max-width: 100px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%; /* در صورتی که عکس شما شکل گرد دارد */
+.logo-enamd img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%; /* در صورتی که عکس شما شکل گرد دارد */
 }
 
 .social-media {
-    position: relative;
-    text-align: center;
-  }
-  
-  .social-media i {
-    font-size: 30px; /* Adjust the size as needed */
-    margin: 10px; /* Adjust the spacing between icons */
-    transition: all 0.3s ease; /* Add a transition for a smoother effect */
-  }
-  
-  .social-media i:hover {
-    color: rgb(0, 89, 255); /* Change the color to your desired hover color */
-  }
-
-  #backToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 0;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-    display: none;
-  }
-  
-  #backToTopBtn:hover {
-    background-color: #555;
-  }
-  #backToTopBtn i {
-    display: none; /* پیش‌فرض: مخفی کردن آیکون */
-    margin-right: 5px; /* تنظیم فاصله بین آیکون و متن */
+  text-align: center;
 }
 
-  @media (max-width: 767px) {
-    .contact-info, .availability, .about-us, .logo {
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-    }
+.social-media i {
+  font-size: 30px; /* Adjust the size as needed */
+  margin: 10px; /* Adjust the spacing between icons */
+  transition: all 0.3s ease; /* Add a transition for a smoother effect */
+}
 
-    .logo img {
-        max-width: 80px;
-        border-radius: 0; /* حذف شکل گرد */
-    }
+.social-media i:hover {
+  color: rgb(0, 89, 255); /* Change the color to your desired hover color */
+}
 
-    .social-media i {
-        font-size: 24px; /* تغییر اندازه آیکون‌ها */
-        margin: 5px; /* تغییر فاصله بین آیکون‌ها */
-    }
 
-    #backToTopBtn {
-        display: block; /* نمایش دکمه برگشت به بالا */
-    }
-   
-        #backToTopBtn.responsive i {
-            display: inline; /* نمایش آیکون در صفحات کوچک */
-        }
-        
-    
+
+
+
+@media (max-width: 767px) {
+  .contact-info, .availability, .about-us, .logo {
+      display: block;
+      margin: 20px auto;
+      text-align: center;
+  }
+
+  .logo-enamd img {
+      max-width: 80px;
+      border-radius: 0; /* حذف شکل گرد */
+  }
+
+  .social-media i {
+      font-size: 24px; /* تغییر اندازه آیکون‌ها */
+      margin: 5px; /* تغییر فاصله بین آیکون‌ها */
+  }
+
+
+      
+  
+}
+#image-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* حداکثر عرض تصویر */
+  margin: 0 auto; /* افزودن margin:auto برای وسط‌چین شدن */
+  z-index: 1; /* اضافه کردن اولویت برای مقابله با تداخل */
+  border-radius: 50%;
+}
+
+#location-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#view-on-map-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 2; /* اولویت بالاتر برای لینک */
+}
+
+#image-container:hover #view-on-map-link {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* تغییرات برای واکنشگرایی */
+@media (max-width: 767px) {
+  #image-container {
+    max-width: 100%; /* تغییر حداکثر عرض به 100% برای اندازه‌گیری انعطاف‌پذیر */
+    border-radius: 0; /* حذف شکل گرد */
+  }
+
+  #view-on-map-link {
+    font-size: 14px; /* تغییر اندازه فونت برای صفحات کوچک */
+  }
 }

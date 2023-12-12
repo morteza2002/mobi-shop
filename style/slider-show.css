@@ -26,7 +26,7 @@
   top: 50%;
   width: auto;
   padding: 16px;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -45,7 +45,7 @@
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Text and Number text styles */
@@ -125,8 +125,30 @@
 }
 
 /* Media Query for responsiveness */
+/* Media Query for responsiveness */
 @media screen and (max-width: 600px) {
   .slideshow-container {
-      max-width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-areas:
+      "slideshow"
+      "static";
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .slideshow-container .text {
+    bottom: 0;
+  }
+
+  .mySlides {
+    grid-area: slideshow;
+    max-width: 100%; /* Ensure slides take full width */
+  }
+
+  .static-image {
+    grid-row: 2;
   }
 }

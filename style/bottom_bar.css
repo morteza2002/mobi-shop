@@ -1,81 +1,676 @@
 .bottom-bar {
-    background: linear-gradient(135deg, #3e7cb4, #86a8e7);
+    /* background: linear-gradient(135deg, #3e7cb4, #86a8e7); */
+    background-color: whitesmoke;
     color: #fff;
-    padding: 10px;
+    padding:1px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     margin-top: 10px;
-}
-.site-info {
+  }
+  
+  .site-info {
     display: flex;
     align-items: center;
-}
-
-/* Site logo styles */
-.site-logo {
+  }
+  
+  /* Site logo styles */
+  .site-logo {
     width: 80px;
     height: 70px;
     margin-right: 10px;
-}
-
-/* Site text styles */
-.site-text {
-    font-size: 16px;
-    color: #ffffff;
-    padding: 10px;
-} 
-
-.search-bar {
+  }
+  
+  .search-bar {
     display: flex;
     align-items: center;
-}
-
-.search-bar input[type="text"] {
-    padding: 8px;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 12px 180px 12px 180px;
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.search-button, .price-btn {
+  }
+  
+  .search-button,
+  .price-btn .location-btn .support-btn {
     padding: 8px 15px;
     background-color: #4ca8af;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.price-btn {
-    background-color: #4CAF50;
+  }
+  
+  .price-btn {
+    background-color: #4cacaf;
     padding: 8px 15px;
     margin-left: 10px;
-}
-
-/* ریسپانسیو برای صفحات با عرض کمتر از 768px */
-@media (max-width: 768px) {
-       .bottom-bar {
-        flex-direction: column; /* Stack items vertically on small screens */
-        text-align: center; /* Center-align text */
-        gap: 10px; /* Add some space between items */
+  }
+  .location-btn {
+    background-color: #55e214;
+    padding: 8px 15px;
+    margin-left: 10px;
+  }
+  .support-btn {
+    background-color: #0077ff;
+    padding: 8px 15px;
+    margin-left: 10px;
+  }
+  .fa-store .fa-map-marker-alt .fa-lifebuoy {
+    font-size: 30px;
+  }
+  
+  /* Responsive styles for screens less than 768px */
+  @media (max-width: 768px) {
+    .bottom-bar {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
     }
+  
+    .search {
+      width: 80%; /* محدود کردن عرض سرچ بار */
+      margin: 0 auto; /* قرار دادن در مرکز افقی */
+      text-align: center; /* قرار دادن متن در وسط عمودی */
+    }
+  
+    .search input {
+      font-size: 14px; /* تغییر اندازه فونت برای سازگاری با اندازه کوچک‌تر */
+    }
+  
     .site-logo {
-        width: 60px;
-        height: 50px;
-        margin-right: 5px;
+      width: 60px;
+      height: 50px;
+      margin-right: 5px;
     }
-    .site-text {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-
+  
     .search-bar input[type="text"] {
-        padding: 3px;
-        margin-right: 5px;
+      padding: 3px;
+      margin-right: 5px;
     }
+  
+    .search-button,
+    .price-btn .location-btn .support-btn {
+      padding: 3px 3px;
+    }
+  }
+  
+  /* Brand animation styles */
+  
+  .brand {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 0 10px 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .brand:before {
+    background-size: 100% 100%;
+    content: "mobi-shop";
+    line-height: 205px;
+    color: #0077ff;
+    font-size: 20px;
+    font-family: "HEAVITAS", "Helvetica Rounded", Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 99999 !important;
+  }
+  
+  .logo {
+    animation: 5s linear infinite;
+    animation-name: rotate-0;
+    animation-delay: 0s;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+  
+  svg path {
+    position: absolute;
+    fill: none;
+    stroke-width: 2;
+    top: 0;
+    left: 0;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    animation: 4s linear infinite;
+  }
+  
+  .logo svg path:nth-child(1) {
+    opacity: 1;
+    animation-name: rotate-1;
+    animation-delay: 0.5s;
+  }
+  
+  .logo svg path:nth-child(2) {
+    opacity: 0.5;
+    animation-name: rotate-2;
+    animation-delay: 0.6s;
+  }
+  
+  .logo svg path:nth-child(3) {
+    opacity: 0.8;
+    animation-name: rotate-3;
+    animation-delay: 0.7s;
+  }
+  
+  @keyframes scale-1 {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate-0 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate-1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate-2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  @keyframes rotate-3 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  #search {
+    display: grid;
+    grid-area: search;
+    grid-template-columns: 1fr auto; /* Two columns: input and icon */
+    justify-content: flex-end; /* Align the search bar to the right */
+    justify-items: start;
+    align-items: center;
+    margin-left: auto; /* Move the search bar to the right */
+    padding: 0px 0px; /* Adjust top and bottom padding */
+  }
+  
+  #search input {
+    display: block;
+    grid-area: search;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 110%;
+    height: 100%;
+    background: none;
+    padding: 0 60px 0 30px; /* Adjust padding for right-aligned text */
+    border: none;
+    border-radius: 100px;
+    font: 24px/1 system-ui, sans-serif;
+    outline-offset: -8px;
+    direction: rtl;
+  }
+  
+  #search svg {
+    grid-area: search;
+    overflow: visible;
+    color: hsl(215, 100%, 50%);
+    fill: none;
+    stroke: currentColor;
+    margin-left: -40px; /* Adjust the margin for right alignment */
+  }
+  
+  .spark {
+    fill: currentColor;
+    stroke: none;
+    r: 15;
+  }
+  
+  .spark:nth-child(1) {
+    animation: spark-radius 2.03s 1s both, spark-one-motion 2s 1s both;
+  }
+  
+  @keyframes spark-radius {
+    0% {
+      r: 0;
+      animation-timing-function: cubic-bezier(0, 0.3, 0, 1.57);
+    }
+    30% {
+      r: 15;
+      animation-timing-function: cubic-bezier(1, -0.39, 0.68, 1.04);
+    }
+    95% {
+      r: 8;
+    }
+    99% {
+      r: 10;
+    }
+    99.99% {
+      r: 7;
+    }
+    100% {
+      r: 0;
+    }
+  }
+  
+  @keyframes spark-one-motion {
+    0% {
+      transform: translate(-20%, 50%);
+      animation-timing-function: cubic-bezier(0.63, 0.88, 0, 1.25);
+    }
+    20% {
+      transform: rotate(-0deg) translate(0%, -50%);
+      animation-timing-function: ease-in;
+    }
+    80% {
+      transform: rotate(-230deg) translateX(-20%) rotate(-100deg) translateX(15%);
+      animation-timing-function: linear;
+    }
+    100% {
+      transform: rotate(-360deg) translate(30px, 100%);
+      animation-timing-function: cubic-bezier(0.64, 0.66, 0, 0.51);
+    }
+  }
+  
+  .spark:nth-child(2) {
+    animation: spark-radius 2.03s 1s both, spark-two-motion 2.03s 1s both;
+  }
+  
+  @keyframes spark-two-motion {
+    0% {
+      transform: translate(120%, 50%) rotate(-70deg) translateY(0%);
+      animation-timing-function: cubic-bezier(0.36, 0.18, 0.94, 0.55);
+    }
+    20% {
+      transform: translate(90%, -80%) rotate(60deg) translateY(-80%);
+      animation-timing-function: cubic-bezier(0.16, 0.77, 1, 0.4);
+    }
+    40% {
+      transform: translate(110%, -50%) rotate(-30deg) translateY(-120%);
+      animation-timing-function: linear;
+    }
+    70% {
+      transform: translate(100%, -50%) rotate(120deg) translateY(-100%);
+      animation-timing-function: linear;
+    }
+    80% {
+      transform: translate(95%, 50%) rotate(80deg) translateY(-150%);
+      animation-timing-function: cubic-bezier(0.64, 0.66, 0, 0.51);
+    }
+    100% {
+      transform: translate(100%, 50%) rotate(120deg) translateY(0%);
+    }
+  }
+  
+  .spark:nth-child(3) {
+    animation: spark-radius 2.05s 1s both, spark-three-motion 2.03s 1s both;
+  }
+  
+  @keyframes spark-three-motion {
+    0% {
+      transform: translate(50%, 100%) rotate(-40deg) translateX(0%);
+      animation-timing-function: cubic-bezier(0.62, 0.56, 1, 0.54);
+    }
+    30% {
+      transform: translate(40%, 70%) rotate(20deg) translateX(20%);
+      animation-timing-function: cubic-bezier(0, 0.21, 0.88, 0.46);
+    }
+    40% {
+      transform: translate(65%, 20%) rotate(-50deg) translateX(15%);
+      animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62);
+    }
+    60% {
+      transform: translate(60%, -40%) rotate(-50deg) translateX(20%);
+      animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62);
+    }
+    70% {
+      transform: translate(70%, -0%) rotate(-180deg) translateX(20%);
+      animation-timing-function: cubic-bezier(0.15, 0.48, 0.76, 0.26);
+    }
+    100% {
+      transform: translate(70%, -0%) rotate(-360deg) translateX(0%) rotate(180deg)
+        translateX(20%);
+    }
+  }
+  
+  .burst {
+    stroke-width: 3;
+  }
+  
+  .burst :nth-child(2n) {
+    color: #ff783e;
+  }
+  .burst :nth-child(3n) {
+    color: #ffab00;
+  }
+  .burst :nth-child(4n) {
+    color: #55e214;
+  }
+  .burst :nth-child(5n) {
+    color: #82d9f5;
+  }
+  
+  .circle {
+    r: 6;
+  }
+  
+  .rect {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .triangle {
+    d: path("M0,-6 L7,6 L-7,6 Z");
+    stroke-linejoin: round;
+  }
+  
+  .plus {
+    d: path("M0,-5 L0,5 M-5,0L 5,0");
+    stroke-linecap: round;
+  }
+  
+  .burst:nth-child(4) {
+    transform: translate(30px, 100%) rotate(150deg);
+  }
+  
+  .burst:nth-child(5) {
+    transform: translate(50%, 0%) rotate(-20deg);
+  }
+  
+  .burst:nth-child(6) {
+    transform: translate(100%, 50%) rotate(75deg);
+  }
+  
+  .burst * {
+  }
+  
+  @keyframes particle-fade {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    5%,
+    80% {
+      opacity: 1;
+    }
+  }
+  
+  .burst :nth-child(1) {
+    animation: particle-fade 600ms 2.95s both, particle-one-move 600ms 2.95s both;
+  }
+  .burst :nth-child(2) {
+    animation: particle-fade 600ms 2.95s both, particle-two-move 600ms 2.95s both;
+  }
+  .burst :nth-child(3) {
+    animation: particle-fade 600ms 2.95s both,
+      particle-three-move 600ms 2.95s both;
+  }
+  .burst :nth-child(4) {
+    animation: particle-fade 600ms 2.95s both, particle-four-move 600ms 2.95s both;
+  }
+  .burst :nth-child(5) {
+    animation: particle-fade 600ms 2.95s both, particle-five-move 600ms 2.95s both;
+  }
+  .burst :nth-child(6) {
+    animation: particle-fade 600ms 2.95s both, particle-six-move 600ms 2.95s both;
+  }
+  
+  @keyframes particle-one-move {
+    0% {
+      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001);
+    }
+    100% {
+      transform: rotate(-20deg) translateX(8%) scale(0.5, 0.5);
+    }
+  }
+  @keyframes particle-two-move {
+    0% {
+      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001);
+    }
+    100% {
+      transform: rotate(0deg) translateX(8%) scale(0.5, 0.5);
+    }
+  }
+  @keyframes particle-three-move {
+    0% {
+      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001);
+    }
+    100% {
+      transform: rotate(20deg) translateX(8%) scale(0.5, 0.5);
+    }
+  }
+  @keyframes particle-four-move {
+    0% {
+      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001);
+    }
+    100% {
+      transform: rotate(-35deg) translateX(12%);
+    }
+  }
+  @keyframes particle-five-move {
+    0% {
+      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001);
+    }
+    100% {
+      transform: rotate(0deg) translateX(12%);
+    }
+  }
+  @keyframes particle-six-move {
+    0% {
+      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001);
+    }
+    100% {
+      transform: rotate(35deg) translateX(12%);
+    }
+  }
+  
+  .bar {
+    width: 100%;
+    height: 100%;
+    ry: 50%;
+    stroke-width: 10;
+    animation: bar-in 900ms 3s both;
+  }
+  
+  @keyframes bar-in {
+    0% {
+      stroke-dasharray: 0 180 0 226 0 405 0 0;
+    }
+    100% {
+      stroke-dasharray: 0 0 181 0 227 0 405 0;
+    }
+  }
+  
+  .magnifier {
+    animation: magnifier-in 600ms 3.6s both;
+    transform-box: fill-box;
+  }
+  
+  @keyframes magnifier-in {
+    0% {
+      transform: translate(20px, 8px) rotate(-45deg) scale(0.01, 0.01);
+    }
+    50% {
+      transform: translate(-4px, 8px) rotate(-45deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
+  
+  .magnifier .glass {
+    cx: 27;
+    cy: 27;
+    r: 8;
+    stroke-width: 3;
+  }
+  .magnifier .handle {
+    x1: 32;
+    y1: 32;
+    x2: 44;
+    y2: 44;
+    stroke-width: 3;
+  }
+  
+  #results {
+    grid-area: results;
+    background: hsl(266, 100%, 50%);
+    direction: rtl; /* Right-to-left text direction for Persian language */
+    text-align: right; /* Align text to the right for Persian language */
+    display: none;
+  }
+  @media only screen and (max-width: 1200px) {
+    #search {
+      width: 60%;
+      max-width: 100%; /* اضافه کردن max-width به اندازه صفحه */
+    }
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    #search {
+      width: 70%;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    #search {
+      width: 80%;
+    }
+    #search svg {
+      margin-left: 0; /* Resetting the margin for center alignment */
+    }
+    #search input {
+      font-size: 18px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #search {
+      width: 80%; /* کوچک‌تر کردن سرچ بار */
+      margin: 0 auto; /* قرار دادن در مرکز افقی */
+      text-align: center; /* قرار دادن متن در وسط عمودی */
+    }
+    @media only screen and (max-width: 400px) {
+      #search {
+        width: 95%;
+        align-items: center;
+      }
+  
+      #search input {
+        font-size: 14px; /* تغییر اندازه فونت برای سازگاری با اندازه کوچک‌تر */
+      }
+    }
+    @media only screen and (max-width: 200px) {
+      #search {
+        width: 95%;
+        align-items: center;
+      }
+  
+      #search input {
+        font-size: 16px;
+      }
+    }
+  
+    #search input {
+      font-size: 16px;
+      /* Add more adjustments for smaller screens if needed */
+    }
+  }
+  
+  .swiper-container {
+    width: 40%;
+    height: 80px;
+    margin-left: 150px;
+    margin-right: 50px;
+    overflow: hidden;
+    
+  }
+  
+.swiper-slide {
+  position: relative;
+  background-image: url("../") center/cover;
 
-    .search-button, .price-btn {
-        padding: 3px 3px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.percent-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+}
+  
+  .text-container {
+    font-size: 38px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 2%;
+    left: 0%;
+    transform: translate(-50%, 0%);
+    animation: slide 5s linear infinite alternate;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 768px) {
+    .swiper-container {
+      width: 80%;
+      margin-left: 0;
+    }
+  
+    .text-container {
+      font-size: 25px;
+      top: 20%;
+      left: 50%;
+    }
+  }
+  @media (min-width:250px){
+    .swiper-container{
+     align-items: center;
+    }
+  }
+  

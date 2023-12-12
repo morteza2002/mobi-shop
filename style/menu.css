@@ -1,11 +1,12 @@
 /* Styles for larger screens */
 .menu {
     position: relative;
-    background: linear-gradient(135deg, #3e7cb4, #86a8e7);
+    background: #085d96;
     padding: 15px;
     text-align: center;
     border-style: ridge;
     margin-top: 10px;
+    z-index: 2; /* Added z-index for the main menu */
 }
 
 .menu-list {
@@ -13,16 +14,47 @@
     padding: 0;
     margin: 0;
     display: flex; /* Display menu horizontally */
-    justify-content: center; /* Align menu items at the center */
+    justify-content: right; /* Align menu items at the center */
 }
 
 .menu-list li {
     margin-right: 20px; /* Spacing between menu items */
+    position: relative;
 }
 
 .menu-list li a {
     text-decoration: none;
     color: #fff;
+    display: block;
+    position: relative;
+    z-index: 2; /* Added z-index for the main menu items */
+}
+
+.menu-list li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #085d96;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 3; /* Added z-index for submenus */
+}
+
+.menu-list li:hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-list li ul li {
+    margin: 0;
+}
+
+.menu-list li ul li a {
+    color: #fff;
+    padding: 10px;
+    display: block;
 }
 
 .menu-toggle {
@@ -34,6 +66,7 @@
     .menu {
         padding: 0;
         text-align: left;
+        z-index: 2; /* Added z-index for the main menu in smaller screens */
     }
 
     .menu-list {
@@ -55,6 +88,33 @@
         color: #002c52;
     }
 
+    .menu-list.active li ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-list li ul {
+        position: static;
+        background: #085d96;
+        display: none;
+        z-index: 3; /* Added z-index for submenus in smaller screens */
+        border-top: 2px solid #fff; /* Example border for separation */
+    }
+
+    .menu-list.active > ul {
+        display: flex;
+    }
+
+    .menu-list.active > a {
+        color: #002c52; /* Change color when submenu is active */
+    }
+
+    .menu-list li ul li a {
+        color: #fff;
+        padding: 10px;
+        display: block;
+    }
+
     .menu-toggle {
         position: absolute;
         top: 10px;
@@ -65,5 +125,6 @@
         color: #002c52;
         font-size: 24px;
         cursor: pointer;
+        z-index: 4; /* Added z-index for the menu toggle button in smaller screens */
     }
 }

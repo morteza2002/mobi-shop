@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
   </head>
 
   <body>
@@ -88,30 +89,150 @@
       </div>
       <div class="bottom-bar">
         <div class="site-info">
-          <img src="public/logo.png" alt="لوگو سایت" class="site-logo" />
-          <h3 class="site-text">بهترین در دنیا</h3>
+          <div class="brand">
+            <div class="logo">
+              <svg width="200px" height="200px">
+                <path stroke="#0077ff" stroke-width="0" fill="#0077ff" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                    s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                    C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                    S144.229,62.683,140.773,59.227z"/>
+                
+                <path stroke="#0077ff" stroke-width="0" fill="#0077ff" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                    s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                    C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                    S144.229,62.683,140.773,59.227z"/>
+                
+                <path stroke="#0077ff" stroke-width="0" fill="#0077ff" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                    s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                    C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                    S144.229,62.683,140.773,59.227z"/>
+            </svg>
+            
+            </div>
+            </div>
+        
         </div>
-        <div class="search-bar">
-          <input type="text" placeholder="جستجو..." />
-          <button class="search-button">جستجو</button>
-        </div>
-        <div class="price-btn">خرید کنید</div>
+      <div id="search">
+	<svg viewBox="0 0 420 60" xmlns="http://www.w3.org/2000/svg">
+		<rect class="bar"/>
+		
+		<g class="magnifier">
+			<circle class="glass"/>
+			<line class="handle" x1="32" y1="32" x2="44" y2="44"></line>
+		</g>
+
+		<g class="sparks">
+			<circle class="spark"/>
+			<circle class="spark"/>
+			<circle class="spark"/>
+		</g>
+
+		<g class="burst pattern-one">
+			<circle class="particle circle"/>
+			<path class="particle triangle"/>
+			<circle class="particle circle"/>
+			<path class="particle plus"/>
+			<rect class="particle rect"/>
+			<path class="particle triangle"/>
+		</g>
+		<g class="burst pattern-two">
+			<path class="particle plus"/>
+			<circle class="particle circle"/>
+			<path class="particle triangle"/>
+			<rect class="particle rect"/>
+			<circle class="particle circle"/>
+			<path class="particle plus"/>
+		</g>
+		<g class="burst pattern-three">
+			<circle class="particle circle"/>
+			<rect class="particle rect"/>
+			<path class="particle plus"/>
+			<path class="particle triangle"/>
+			<rect class="particle rect"/>
+			<path class="particle plus"/>
+		</g>
+	</svg>
+	<input type=search name=q aria-label="Search for inspiration"/>
+</div>
+
+<div id="results">
+	
+</div>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img class="percent-img" src="public/percent.jpg" alt="">
+      <div class="text-container">
+        <p>بیا و از ما خرید کنید!</p>
+      </div>
+    </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+        <div class="price-btn"> <i class="fas fa-store"></i></div>
+        <div class="location-btn">  <i class=" fas fa-map-marker-alt"></i></div>
+        <div class="support-btn"> <i class="fas fa-star"></i></div>
       </div>
       <div class="menu">
         <button class="menu-toggle">&#9776;</button>
         <!-- دکمه همبرگر برای نمایش منو در صفحه‌های کوچک -->
         <ul class="menu-list">
-          <li><a href="#">خانه</a></li>
-          <li><a href="#">قاب و گلس</a></li>
-          <li><a href="#">جانبی موبایل</a></li>
-          <li><a href="#">رم ، فلش ، هارد</a></li>
-          <li><a href="#">جانبی رایانه</a></li>
-          <li><a href="#">گوشی ، تبلت ، لپ تاپ</a></li>
-          <li><a href="#">لوازم فانتزی</a></li>
-          <li><a href="#">پیشنهاد داغ</a></li>
-          <li><a href="#">لوازم خانگی</a></li>
+            <li>
+                <a href="#">خانه</a>
+                <ul class="submenu">
+                    <li><a href="#">لوستر</a></li>
+                    <li><a href="#">فرش</a></li>
+                    <li><a href="#">پارچه دیواری</a></li>
+                    <li><a href="#">پتو و بالش</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">قاب و گلس</a>
+                <ul class="submenu">
+                    <li><a href="#">قاب عکس چوبی</a></li>
+                    <li><a href="#">گلس محافظ صفحه</a></li>
+                    <li><a href="#">قاب گلسی گوشی</a></li>
+                    <li><a href="#">گلس محافظ دوربین</a></li>
+                    <li><a href="#">پایه نگهدارنده گوشی</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">جانبی موبایل</a>
+                <ul class="submenu">
+                    <li><a href="#">هدفون بلوتوث</a></li>
+                    <li><a href="#">شارژر همراه</a></li>
+                    <li><a href="#">کاور گوشی</a></li>
+                    <li><a href="#">کارت حافظه</a></li>
+                    <li><a href="#">اسپیکر بلوتوث</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">رم ، فلش ، هارد</a>
+                <ul class="submenu">
+                    <li><a href="#">رم کامپیوتر</a></li>
+                    <li><a href="#">فلش مموری</a></li>
+                    <li><a href="#">هارد اکسترنال</a></li>
+                    <li><a href="#">کارت حافظه SD</a></li>
+                    <li><a href="#">کیبورد و ماوس</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">جانبی رایانه</a>
+                <ul class="submenu">
+                    <li><a href="#">مانیتور</a></li>
+                    <li><a href="#">کیس کامپیوتر</a></li>
+                    <li><a href="#">اسکنر</a></li>
+                    <li><a href="#">پرینتر</a></li>
+                    <li><a href="#">هاب USB</a></li>
+                </ul>
+            </li>
+            <!-- ادامه برای سایر گزینه‌ها -->
         </ul>
-      </div>
+    </div>
+    
       <div class="grid-container">
         <div class="image-container">
           <div class="slideshow-container">
@@ -164,11 +285,14 @@
         </div>
         <div class="static-image">
           <div class="image-with-transition">
-            <img src="public/static-img1.jpg" alt="Image 1" />
-            <img src="public/static-img2.jpg" alt="Image 2" />
+            <img src="public/تخفیف.jpeg" alt="Image 1" />
+            <img src="public/خرید.webp" alt="Image 2" />
           </div>
         </div>
       </div>
+     
+
+      
       <div class="slider-container2" data-slides-more-than-visible="false">
         <div class="slider2">
           <!-- محصول 1 -->
@@ -227,6 +351,16 @@
         <button class="next2" onclick="moveSlider(1)">&#10094;</button>
       </div>
 
+
+      <div class="ad_video">
+        <video controls >
+          <source src="public/Create your first AI video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      </div>
+      <button id="openModalBtn">Open Video Advertisement</button>
+
+
       <h3 class="subtitle">رم،فلش،هارد</h3>
       <h3 class="subtitle">جانبی رایانه</h3>
       <h3 class="subtitle">لوازم جانبی موبایل</h3>
@@ -256,7 +390,18 @@
           <p>درباره با ما</p>
           <p>تماس با ما</p>
         </div>
-        <div class="logo">
+         <div class="location-map"> <div id="image-container">
+          <!-- عکس مکانیت -->
+          <img src="public/google-map.png" alt="Location Image" id="location-image">
+          <!-- عکس مکانیت -->
+      
+          <!-- لینک مشاهده در گوگل مپ -->
+          <a href="https://www.google.com/maps/place/34.8136497,48.5670138" target="_blank" id="view-on-map-link">
+            مشاهده در گوگل مپ
+          </a>
+          <!-- لینک مشاهده در گوگل مپ -->
+        </div></div>
+        <div class="logo-enamd">
           <img src="public/enamd.png" alt="عکس" />
         </div>
         <div class="social-media">
@@ -266,20 +411,15 @@
           <i class="fab fa-instagram-square"></i>
           <i class="fab fa-linkedin"></i>
         </div>
-        <button
-          onclick="topFunction()"
-          id="backToTopBtn"
-          title="بازگشت به بالا"
-        >
-          <i class="fas fa-arrow-up"></i> بازگشت به بالا
-        </button>
+     
       </footer>
     </div>
-
+ 
     <script src="scripts/nav.js"></script>
     <script src="scripts/menu.js"></script>
     <script src="scripts/slider-show.js"></script>
     <script src="scripts/shopItem.js"></script>
     <script src="scripts/backTop.js"></script>
+    <script src="scripts/ad-video.js"></script>
   </body>
 </html>

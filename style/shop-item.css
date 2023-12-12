@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
   margin-bottom: 100px;
   width: 80%;
   margin: 0 auto;
@@ -11,7 +12,7 @@
   overflow: hidden;
   text-align: center;
   border-top: 1px solid #ccc; /* خط بردار بالای اسلایدر */
-  margin-top: 20px; 
+  margin-top: 30px; 
   }
   
   .slider2 {
@@ -27,9 +28,9 @@
   
   .slide2 img {
     width: 200px;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 5%;
     margin-bottom: 15px;
   }
   
@@ -65,25 +66,41 @@
   }
   
   /* برای صفحات با اندازه کوچکتر از 768px */
-@media (max-width: 768px) {
+/* برای صفحات با اندازه بزرگتر از 1200px */
+@media (min-width: 1200px) {
   .slider-container2 {
-    width: 90%; /* تغییر عرض اسلایدر */
+    width: 80%; /* عرض اسلایدر را به حالت اولیه باز می‌گرداند */
   }
-  
+}
+
+/* برای صفحات با اندازه بین 769px تا 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .slider2 {
+    flex-wrap: wrap;
+  }
+
   .slide2 {
-    min-width: 200px; /* تغییر حداقل عرض اسلاید */
-    padding: 15px; /* تغییر حاشیه */
+    width: 50%; /* دوتا ایتم در هر ردیف */
+    box-sizing: border-box;
+    padding: 15px;
   }
-  
-  .slide2 img {
-    width: 150px; /* تغییر اندازه تصاویر */
-    height: 150px;
-    margin-bottom: 10px; /* تغییر فاصله بین تصاویر و متن */
+
+  .prev2, .next2 {
+    display: none;
   }
-  
-  button.buy-btn {
-    padding: 6px 12px; /* تغییر اندازه دکمه خرید */
+}
+
+/* برای صفحات با اندازه کوچکتر از 769px */
+@media (max-width: 768px) {
+  .slider2 {
+    flex-wrap: nowrap; /* ایتم‌ها به صورت افقی قرار می‌گیرند */
   }
-  
-  /* و هر تغییر دیگری که برای سازگاری با ابعاد کوچکتر مورد نیاز است */
+
+  .slide2 {
+    width: 100%; /* یک ایتم در هر ردیف */
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+ 
 }

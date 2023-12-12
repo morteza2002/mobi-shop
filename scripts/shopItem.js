@@ -1,7 +1,7 @@
 class Slider2 {
     constructor(containerSelector, slideSelector, prevButtonSelector, nextButtonSelector) {
         this.slideIndex = 0;
-        this.slidesToShow = 3;
+        this.slidesToShow = 3; // تعداد ایتم‌های نمایش داده شده در اسلایدر به حالت اولیه تنظیم شده است
         this.slides = document.querySelectorAll(slideSelector);
         this.totalSlides = this.slides.length;
 
@@ -35,4 +35,4 @@ class Slider2 {
 }
 
 // نمونه ایجاد اسلایدر
-const mySlider = new Slider2('.slider-container', '.slide2', '.prev2', '.next2');
+const mySlider = new Slider2('.slider-container2', '.slide2', '.prev2', '.next2');
