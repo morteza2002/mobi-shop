@@ -17,3 +17,4 @@ dropbtn.addEventListener("click", function (event) {
 document.body.addEventListener("click", function () {
   dropdownContent.style.display = "none"; // مخفی کردن dropdown
 });
+

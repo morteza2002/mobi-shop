@@ -664,8 +664,9 @@
   
     .text-container {
       font-size: 25px;
-      top: 20%;
+      top: 10%;
       left: 50%;
+      align-items: center;
     }
   }
   @media (min-width:250px){
