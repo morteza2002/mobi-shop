@@ -414,7 +414,33 @@
      
       </footer>
     </div>
- 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // تابع برای مخفی کردن سایر زیر لیست‌ها
+        function hideOtherSubmenus() {
+          $('.menu-list li').not($(this)).find('ul').hide();
+        }
+    
+        // تابع برای نمایش یا مخفی کردن زیر لیست فعلی
+        function toggleSubmenu() {
+          $(this).find('ul').toggle();
+        }
+    
+        // کلیک روی آیکن منو تاگل
+        $('.menu-toggle').click(function() {
+          $('.menu-list').toggle();
+        });
+    
+        // کلیک روی ایتم‌های لیست اصلی
+        $('.menu-list li').click(function() {
+          hideOtherSubmenus.call(this);
+          toggleSubmenu.call(this);
+        });
+      });
+    </script>
+    
+
     <script src="scripts/nav.js"></script>
     <script src="scripts/menu.js"></script>
     <script src="scripts/slider-show.js"></script>

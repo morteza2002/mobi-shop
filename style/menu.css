@@ -66,13 +66,13 @@
     .menu {
         padding: 0;
         text-align: left;
-        z-index: 2; /* Added z-index for the main menu in smaller screens */
+        z-index: 2;
     }
 
     .menu-list {
-        display: none;
+        display: flex;
         flex-direction: column;
-        text-align: center; /* Align text at the center for smaller screens */
+        text-align: center;
     }
 
     .menu-list.active {
@@ -81,6 +81,7 @@
 
     .menu-list li {
         margin: 10px 0;
+        position: relative;
     }
 
     .menu-list li a {
@@ -88,25 +89,28 @@
         color: #002c52;
     }
 
-    .menu-list.active li ul {
-        display: flex;
-        flex-direction: column;
-    }
-
     .menu-list li ul {
         position: static;
         background: #085d96;
         display: none;
-        z-index: 3; /* Added z-index for submenus in smaller screens */
-        border-top: 2px solid #fff; /* Example border for separation */
+        z-index: 3;
+        border-top: 2px solid #fff;
     }
 
     .menu-list.active > ul {
         display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 
     .menu-list.active > a {
-        color: #002c52; /* Change color when submenu is active */
+        color: #002c52;
+    }
+
+    .menu-list li ul li {
+        margin: 0;
     }
 
     .menu-list li ul li a {
@@ -125,6 +129,6 @@
         color: #002c52;
         font-size: 24px;
         cursor: pointer;
-        z-index: 4; /* Added z-index for the menu toggle button in smaller screens */
+        z-index: 4;
     }
 }
